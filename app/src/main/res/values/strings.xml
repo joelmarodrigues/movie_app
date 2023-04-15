@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">movie_app</string>
+    <string name="movie_poster">movie_poster</string>
+    <string name="rating">rating</string>
+    <string name="starring">Starring:</string>
+    <string name="cast">Cast:</string>
+    <string name="running_time">Running time:</string>
+    <string name="seat_icon" />
+    <string name="book_now">BOOK NOW</string>
+    <string name="seats_remaining">seats remaining</string>
+</resources>
