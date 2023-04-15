@@ -33,9 +33,10 @@ This is an optional section, feel free to remove this.
 A short report (300-1000 words) describing the challenges you faced, failed attempts and workarounds used, any helper or alternative libraries you have used, and what you have learned in the process.
 
 ## References and Credits
-- RecyclerView Example. 
+- RecyclerView Example.  
 URL: Link  
-- NotifyItemChanged Blog. URL: Link
+- NotifyItemChanged Blog.  
+- URL: Link
 
 ## APK Releases
 Add your release name and update this link
