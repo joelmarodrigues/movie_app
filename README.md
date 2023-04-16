@@ -65,8 +65,12 @@ Icons: https://icons8.com/
   - https://www.youtube.com/watch?v=J_onMnmgF5o&t=5882s  
   
 ## Screenshots
-![Movie App Screenshot](app/src/main/res/drawable/home.png)
 
+### Home Screen
+![Home Screen](app/src/main/res/drawable/home.png)
+
+### Movie Details Screen
+![Movie Details Screen](app/src/main/res/drawable/movie_details.png)
 
   
 ## APK Releases
