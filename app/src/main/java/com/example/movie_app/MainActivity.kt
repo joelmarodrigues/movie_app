@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
         movieAdapter = MovieAdapter(movieList, this)
         recyclerView.adapter = movieAdapter
     }
+
     override fun onItemClick(movie: Movie) {
         val intent = Intent(this, MovieDetailsActivity::class.java).apply {
             putExtra("MOVIE_TITLE", movie.title)

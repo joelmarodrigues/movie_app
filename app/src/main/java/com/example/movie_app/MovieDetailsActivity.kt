@@ -1,5 +1,8 @@
 package com.example.movie_app
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -8,6 +11,10 @@ import androidx.core.content.ContextCompat
 
 class MovieDetailsActivity : AppCompatActivity() {
 
+    private var seatsRemaining = 0
+    private var seatsSelected = 0
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
@@ -19,7 +26,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         val cast = intent.getStringExtra("MOVIE_CAST")
         val runningTime = intent.getStringExtra("MOVIE_RUNNING_TIME")
         val description = intent.getStringExtra("MOVIE_DESCRIPTION")
-        val seatsRemaining = intent.getIntExtra("MOVIE_SEATS_REMAINING", 0)
+        seatsRemaining = intent.getIntExtra("MOVIE_SEATS_REMAINING", 0)
 
         // Movie details
         findViewById<ImageView>(R.id.movie_image_details).setImageResource(imageResId)
@@ -28,24 +35,29 @@ class MovieDetailsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.movie_cast_detail).text = cast
         findViewById<TextView>(R.id.movie_running_time_detail).text = runningTime
         findViewById<TextView>(R.id.movie_description).text = description
-        findViewById<TextView>(R.id.movie_seats_remaining_detail).text = seatsRemaining.toString()
+
+        val seatsRemainingTextView = findViewById<TextView>(R.id.movie_seats_remaining_detail)
+        seatsRemainingTextView.text = seatsRemaining.toString()
 
         // Click listeners - add and minus icons
         val minusIcon = findViewById<ImageView>(R.id.minus_icon_detail)
         val addIcon = findViewById<ImageView>(R.id.add_icon_detail)
         val seatsSelectedTextView = findViewById<TextView>(R.id.seats_selected_detail)
 
-        // Grey color filter initially for minus icon
-        minusIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
-
+        minusIcon.setColorFilter(
+            ContextCompat.getColor(
+                this,
+                R.color.grey
+            )
+        ) // grey color filter initially
         minusIcon.setOnClickListener {
-            var seatsSelected = seatsSelectedTextView.text.toString().toInt()
             if (seatsSelected > 0) {
                 seatsSelected--
                 seatsSelectedTextView.text = seatsSelected.toString()
+                seatsRemainingTextView.text = (seatsRemaining - seatsSelected).toString()
             }
 
-            // Add icon if seats selected equals seats remaining
+            // Add icon grey if seats selected equals seats remaining
             if (seatsSelected == seatsRemaining) {
                 addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
             } else {
@@ -60,29 +72,29 @@ class MovieDetailsActivity : AppCompatActivity() {
             }
         }
 
-        // Set the add button to grey if seats remaining is zero
-        if (seatsRemaining == 0) {
-            addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
-        }
-
         addIcon.setOnClickListener {
-            var seatsSelected = seatsSelectedTextView.text.toString().toInt()
             if (seatsSelected < seatsRemaining) {
                 seatsSelected++
                 seatsSelectedTextView.text = seatsSelected.toString()
+                seatsRemainingTextView.text = (seatsRemaining - seatsSelected).toString()
 
                 // Minus icon = grey if seats selected is greater than zero
                 if (seatsSelected > 0) {
                     minusIcon.clearColorFilter()
                 }
 
-                // + icon unavailable if seats selected equals seats remaining
+                // Add icon grey if seats selected equals seats remaining
                 if (seatsSelected == seatsRemaining) {
                     addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
                 } else {
                     addIcon.clearColorFilter()
                 }
             }
+
+            // Send the seatsSelected value back to MainActivity
+            val returnIntent = Intent()
+            returnIntent.putExtra("SEATS_SELECTED", seatsSelected)
+            setResult(Activity.RESULT_OK, returnIntent)
         }
     }
 }
