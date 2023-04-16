@@ -41,12 +41,6 @@ This is an Android app that allows users to browse and book movie tickets for th
 - Roboto Condensed font used for headings and buttons
 - Clickable movie posters and Book Now buttons
 
-## Screenshots
-
-![Movie List](screenshots/movie_list.png)
-![Movie Details](screenshots/movie_details.png)
-![Booking](screenshots/booking.png)
-
 ## References and Credits
 Zoom Meetings: Ramachandran, S. (2023). 
 Mobile App 1 - BSC20922 - Semester 2 [Zoom Meetings]. 
