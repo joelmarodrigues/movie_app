@@ -10,4 +10,5 @@
     <color name="my_primary_variant_color">#D32F2F</color>
     <color name="my_text_color_on_primary">#000000</color>
 
+    <color name="grey">#999999</color>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.movie_app
 
-import MovieAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
 
-        // Create a MovieAdapter to bind the movie data to the views in the RecyclerView
+        // Create a com.example.movie_app.MovieAdapter to bind the movie data to the views in the RecyclerView
         val movieList = createMovieList()
         movieAdapter = MovieAdapter(movieList, this)
         recyclerView.adapter = movieAdapter
@@ -35,6 +34,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
             putExtra("MOVIE_RATING_RES_ID", movie.ratingResId)
             putExtra("MOVIE_CAST", movie.cast)
             putExtra("MOVIE_RUNNING_TIME", movie.runningTime)
+            putExtra("MOVIE_DESCRIPTION", movie.description)
             putExtra("MOVIE_SEATS_REMAINING", movie.seatsRemaining)
         }
         startActivity(intent)
@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
                 R.drawable.tbc,
                 "Michael B. Jordan, Tessa Thompson, Jonathan Majors, Wood Harris",
                 "116 mins",
+                "When a childhood friend and former boxing prodigy, Damian (Jonathan Majors), resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring.",
                 Movie.generateRandomSeatsRemaining()
             ),
             Movie(
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
                 R.drawable.sixteen,
                 "Keanu Reeves, Donnie Yen, Bill Skarsgård",
                 "169 mins",
+                "John Wick (Keanu Reeves) uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes. ",
                 Movie.generateRandomSeatsRemaining()
             ),
             Movie(
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
                 R.drawable.tbc,
                 "Chris Pine, Michelle Rodriguez, Justice Smith, Regé-Jean Page, Sophia Lillis, Chloe Coleman, Daisy Head, Hugh Grant",
                 "134 mins",
+                "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
                 Movie.generateRandomSeatsRemaining()
             ),
             Movie(
@@ -74,6 +77,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
                 R.drawable.pg,
                 "Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black, Seth Rogen",
                 "92 mins",
+                "A plumber named Mario travels through an underground labyrinth with his brother, Luigi, trying to save a captured princess.",
                 Movie.generateRandomSeatsRemaining()
             ),
         )

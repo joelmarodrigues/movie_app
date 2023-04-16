@@ -6,8 +6,9 @@ data class Movie(
     val imageResId: Int,
     val title: String,
     val ratingResId: Int,
-    val cast: String,
+    val cast: String, //Movie Details only
     val runningTime: String,
+    val description: String,
     val seatsRemaining: Int,
 ) {
     companion object {
@@ -26,7 +27,8 @@ data class Movie(
             2 -> ratingResId
             3 -> cast
             4 -> runningTime
-            5 -> seatsRemaining
+            5 -> description
+            6 -> seatsRemaining
             else -> null
         }
     }

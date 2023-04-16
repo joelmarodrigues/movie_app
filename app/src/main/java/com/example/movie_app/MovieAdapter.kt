@@ -1,11 +1,11 @@
+package com.example.movie_app
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movie_app.Movie
-import com.example.movie_app.R
 
 class MovieAdapter(private val movieList: List<Movie>, private val listener: OnItemClickListener) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
