@@ -67,10 +67,10 @@ Icons: https://icons8.com/
 ## Screenshots
 
 ### Home Screen
-![Home Screen]<img src="app/src/main/res/drawable/home.png" width="400">
+<img src="app/src/main/res/drawable/home.png" width="200">
 
 ### Movie Details Screen
-![Movie Details Screen](app/src/main/res/drawable/movie_details.png)
+<img src="app/src/main/res/drawable/movie_details.png" width="200">
 
   
 ## APK Releases
