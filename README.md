@@ -65,7 +65,7 @@ Icons: https://icons8.com/
   - https://www.youtube.com/watch?v=J_onMnmgF5o&t=5882s  
   
 ## Screenshots
-![Movie App Screenshot](movie_app/app/src/main/res/drawable/home.png)
+![Movie App Screenshot](app/src/main/res/drawable/home.png)
 
 
   
