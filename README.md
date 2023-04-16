@@ -51,9 +51,9 @@ Github Repository:
 Ramachandran, S. (2023). Dorset MobileApps1  
 Retrieved from https://github.com/saravanabalagi/dorset_mobileApps1
 
-Image Source: https://www.rogerebert.com/reviews/
-Content Source: https://www.myvue.com/
-Icons: https://icons8.com/
+Image Source: https://www.rogerebert.com/reviews/  
+Content Source: https://www.myvue.com/  
+Icons: https://icons8.com/  
 
 - How to use Roboto in XML layout: https://stackoverflow.com/questions/34444616/how-to-use-roboto-in-xml-layout
 - View.OnClickListener: https://developer.android.com/reference/android/view/View.OnClickListener
