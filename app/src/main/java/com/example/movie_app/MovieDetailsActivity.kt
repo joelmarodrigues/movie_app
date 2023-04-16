@@ -1,8 +1,6 @@
 package com.example.movie_app
 
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -90,11 +88,6 @@ class MovieDetailsActivity : AppCompatActivity() {
                     addIcon.clearColorFilter()
                 }
             }
-
-            // Send the seatsSelected value back to MainActivity
-            val returnIntent = Intent()
-            returnIntent.putExtra("SEATS_SELECTED", seatsSelected)
-            setResult(Activity.RESULT_OK, returnIntent)
         }
     }
 }
