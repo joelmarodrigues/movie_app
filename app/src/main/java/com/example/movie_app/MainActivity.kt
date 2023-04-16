@@ -1,11 +1,13 @@
 package com.example.movie_app
 
+import MovieAdapter
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var movieAdapter: MovieAdapter
@@ -23,8 +25,19 @@ class MainActivity : AppCompatActivity() {
 
         // Create a MovieAdapter to bind the movie data to the views in the RecyclerView
         val movieList = createMovieList()
-        movieAdapter = MovieAdapter(movieList)
+        movieAdapter = MovieAdapter(movieList, this)
         recyclerView.adapter = movieAdapter
+    }
+    override fun onItemClick(movie: Movie) {
+        val intent = Intent(this, MovieDetailsActivity::class.java).apply {
+            putExtra("MOVIE_TITLE", movie.title)
+            putExtra("MOVIE_IMAGE_RES_ID", movie.imageResId)
+            putExtra("MOVIE_RATING_RES_ID", movie.ratingResId)
+            putExtra("MOVIE_CAST", movie.cast)
+            putExtra("MOVIE_RUNNING_TIME", movie.runningTime)
+            putExtra("MOVIE_SEATS_REMAINING", movie.seatsRemaining)
+        }
+        startActivity(intent)
     }
 
     private fun createMovieList(): List<Movie> {
@@ -63,6 +76,8 @@ class MainActivity : AppCompatActivity() {
                 "92 mins",
                 Movie.generateRandomSeatsRemaining()
             ),
-)
+        )
     }
+
+
 }

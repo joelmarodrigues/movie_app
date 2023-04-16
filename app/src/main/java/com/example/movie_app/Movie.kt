@@ -9,13 +9,25 @@ data class Movie(
     val cast: String,
     val runningTime: String,
     val seatsRemaining: Int,
-)
-{
+) {
     companion object {
         private val RANDOM = Random()
 
         fun generateRandomSeatsRemaining(): Int {
             return RANDOM.nextInt(16)
+        }
+
+    }
+
+    operator fun get(position: Int): Any? {
+        return when (position) {
+            0 -> imageResId
+            1 -> title
+            2 -> ratingResId
+            3 -> cast
+            4 -> runningTime
+            5 -> seatsRemaining
+            else -> null
         }
     }
 }
