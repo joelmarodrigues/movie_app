@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 class MovieDetailsActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
@@ -34,6 +35,9 @@ class MovieDetailsActivity : AppCompatActivity() {
         val addIcon = findViewById<ImageView>(R.id.add_icon_detail)
         val seatsSelectedTextView = findViewById<TextView>(R.id.seats_selected_detail)
 
+        // Grey color filter initially for minus icon
+        minusIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
+
         minusIcon.setOnClickListener {
             var seatsSelected = seatsSelectedTextView.text.toString().toInt()
             if (seatsSelected > 0) {
@@ -41,19 +45,24 @@ class MovieDetailsActivity : AppCompatActivity() {
                 seatsSelectedTextView.text = seatsSelected.toString()
             }
 
-            // Update the color of the add icon if seats selected equals seats remaining
+            // Add icon if seats selected equals seats remaining
             if (seatsSelected == seatsRemaining) {
                 addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
             } else {
                 addIcon.clearColorFilter()
             }
 
-            // Minus icon changes color to grey if seats selected is zero
+            // Minus icon changes color to grey if seats selected is back to zero
             if (seatsSelected == 0) {
                 minusIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
             } else {
                 minusIcon.clearColorFilter()
             }
+        }
+
+        // Set the add button to grey if seats remaining is zero
+        if (seatsRemaining == 0) {
+            addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
         }
 
         addIcon.setOnClickListener {
@@ -67,7 +76,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                     minusIcon.clearColorFilter()
                 }
 
-                // Add icon if seats selected equals seats remaining
+                // + icon unavailable if seats selected equals seats remaining
                 if (seatsSelected == seatsRemaining) {
                     addIcon.setColorFilter(ContextCompat.getColor(this, R.color.grey))
                 } else {
