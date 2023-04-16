@@ -66,15 +66,13 @@ Icons: https://icons8.com/
   
 ## Screenshots
 
-## Screenshots
-
-<table>
+<table style="border-collapse: collapse;">
   <tr>
-    <td>
-      <img src="app/src/main/res/drawable/home.png" alt="Home Screen" width="200">
+    <td style="padding-right: 100px;">
+      <img src="app/src/main/res/drawable/home.png" alt="Home Screen" width="250">
     </td>
     <td>
-      <img src="app/src/main/res/drawable/movie_toast.png" alt="Movie Details Screen" width="200">
+      <img src="app/src/main/res/drawable/movie_details.png" alt="Movie Details Screen" width="250">
     </td>
   </tr>
   <tr>
@@ -83,14 +81,12 @@ Icons: https://icons8.com/
   </tr>
 </table>
 
-
-  
 ## APK Releases
 Download the latest version [here](https://github.com/joelmarodrigues/movie_app/releases/tag/toast).
 
 - Tickets Movie v1.1.0  
 
-#Testing features
+- Testing features  
 To watch a short video demonstrating the features of the app, click [here](https://youtube.com/shorts/6wkHrcQW0Gk?feature=share).
 
 
