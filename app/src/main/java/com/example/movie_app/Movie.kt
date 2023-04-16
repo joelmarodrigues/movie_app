@@ -6,7 +6,6 @@ data class Movie(
     val imageResId: Int,
     val title: String,
     val ratingResId: Int,
-    val description: String,
     val cast: String,
     val runningTime: String,
     val seatsRemaining: Int,
