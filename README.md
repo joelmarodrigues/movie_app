@@ -15,28 +15,56 @@ Course: Bsc in Computing
     - [x] 1.2.4. You shall fill random URLs for images from pixabay or other free image providers to begin with
   - [x] 1.3. Build a Recycler View using the specified template, refer to recycler_view_template_*.jpg (provided on Moodle)
   - [ ] 1.4. If any seats are selected, show how many seats are selected and hide remaining seats
-- [ ] 2. Seat selection feature:
+- [x] 2. Seat selection feature:
   - [x] 2.1. Clicking any item (anywhere on the item) on the movie recycler view should open a new MovieActivity, refer to movie_activity_*.jpg (provided on Moodle)
   - [x] 2.2. Add plus and minus icons, show seats_selected in the middle
   - [x] 2.3. On click plus/minus, update both seats_selected and seats_remaining for that movie
   - [x] 2.4. Add validation, when 0 seats selected minus is disabled, when 0 seats remaining plus is disabled
   - [ ] 2.5. When back is pressed, the selected seats are retained and reflected in the recycler view. (Hint: If you don’t see any updates, call adapter notifyItemChanged as soon as you return to the recycler view activity)
-- [ ] 3. Bonus:
-  - [ ] 3.1. Add "filling fast" badge if less than 3 seats remaining
+- [x] 3. Bonus:
+  - [x] 3.1. Add "filling fast" badge if less than 3 seats remaining
   - [x] 3.2. Use "Roboto Condensed" font to replicate same style
   - [ ] 3.3. Use original movie images from myvue.com or your favourite provider (Hint: check get_movie_image_url.gif (provided on Moodle))
 
-## Additional Features implemented
-This is an optional section, feel free to remove this.
 
 ## Report
-A short report (300-1000 words) describing the challenges you faced, failed attempts and workarounds used, any helper or alternative libraries you have used, and what you have learned in the process.
+# Tickets Movie App
+
+This is an Android app that allows users to browse and book movie tickets for their favorite movies.
+
+## Features
+
+- View a list of available movies
+- View movie details including title, synopsis, and release date  
+- Book movie tickets by selecting a movie and seats  
+- Toast messages for seat selection validation and successful booking  
+- Roboto Condensed font used for headings and buttons
+- Clickable movie posters and Book Now buttons
 
 ## References and Credits
-- RecyclerView Example.  
-URL: Link  
-- NotifyItemChanged Blog.  
-- URL: Link
+Zoom Meetings: Ramachandran, S. (2023). 
+Mobile App 1 - BSC20922 - Semester 2 [Zoom Meetings]. 
+Dorset College Dublin.
 
+Github Repository: Ramachandran, S. (2023). Dorset MobileApps1. 
+Retrieved from https://github.com/saravanabalagi/dorset_mobileApps1
+
+Image Source: https://www.rogerebert.com/reviews/
+Content Source: https://www.myvue.com/
+Icons: https://icons8.com/
+
+- How to use Roboto in XML layout: https://stackoverflow.com/questions/34444616/how-to-use-roboto-in-xml-layout
+- View.OnClickListener: https://developer.android.com/reference/android/view/View.OnClickListener
+- OnClickListener interface: https://www.raywenderlich.com/5602-building-an-android-ui-with-kotlin-building-interaction
+- onActivityResult: https://developer.android.com/reference/android/app/Activity#onActivityResult(int,%20int,%20android.content.Intent)
+- Snackbar: https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar
+- Video Classes and Tutorials: 
+  - https://www.youtube.com/watch?v=HtwDXRWjMcU
+  - https://www.youtube.com/watch?v=J_onMnmgF5o&t=5882s  
+  
+  
 ## APK Releases
-Add your release name and update this link
+Download the latest version [here](https://github.com/joelmarodrigues/movie_app/releases/tag/toast).
+
+- Tickets Movie v1.1.0
+
