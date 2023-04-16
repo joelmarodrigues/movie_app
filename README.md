@@ -1,4 +1,4 @@
-# movie_app
+### Tickets Movie App
 
 Mobile Apps 1 CA2  
 Student Name: Joelma Rodrigues  
