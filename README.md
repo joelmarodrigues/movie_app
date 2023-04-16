@@ -66,11 +66,23 @@ Icons: https://icons8.com/
   
 ## Screenshots
 
-### Home Screen
-<img src="app/src/main/res/drawable/home.png" width="200">
+## Screenshots
 
-### Movie Details Screen
-<img src="app/src/main/res/drawable/movie_details.png" width="200">
+<table>
+  <tr>
+    <td>
+      <img src="app/src/main/res/drawable/home.png" alt="Home Screen" width="200">
+    </td>
+    <td>
+      <img src="app/src/main/res/drawable/movie_toast.png" alt="Movie Details Screen" width="200">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Home Screen</b></td>
+    <td align="center"><b>Movie Details Screen</b></td>
+  </tr>
+</table>
+
 
   
 ## APK Releases
