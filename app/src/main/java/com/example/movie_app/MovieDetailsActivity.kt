@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -89,5 +90,10 @@ class MovieDetailsActivity : AppCompatActivity() {
                 }
             }
         }
+
+        //Toast message
+        if (seatsRemaining <= 3) {
+            Toast.makeText(this, "Selling Fast!", Toast.LENGTH_LONG).show()
+        }
+        }
     }
-}

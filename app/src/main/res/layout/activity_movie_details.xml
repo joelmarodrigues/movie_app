@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/movie_rating_image_detail"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:baselineAligned="false"
             android:contentDescription="@string/rating" />
 
@@ -175,6 +175,5 @@
             android:text="@string/seats_remaining"
             android:textSize="14sp"
             tools:ignore="RtlSymmetry" />
-
     </LinearLayout>
 </LinearLayout>
