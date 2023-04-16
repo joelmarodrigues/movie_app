@@ -1,12 +1,16 @@
 package com.example.movie_app
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MovieDetailsActivity : AppCompatActivity() {
 
@@ -42,6 +46,26 @@ class MovieDetailsActivity : AppCompatActivity() {
         val minusIcon = findViewById<ImageView>(R.id.minus_icon_detail)
         val addIcon = findViewById<ImageView>(R.id.add_icon_detail)
         val seatsSelectedTextView = findViewById<TextView>(R.id.seats_selected_detail)
+
+        val confirmButton = findViewById<Button>(R.id.book_now_button)
+        //Change the number of remaining seats according to the number of seats booked
+        confirmButton.setOnClickListener {
+            if (seatsSelected > 0) {
+                val updatedSeatsRemaining = seatsRemaining - seatsSelected
+                val message = "You have selected $seatsSelected seat(s). Enjoy the movie!"
+                Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT).show()
+
+                // Pass updated seats remaining value back to MainActivity
+                val returnIntent = Intent()
+                returnIntent.putExtra("UPDATED_SEATS_REMAINING", updatedSeatsRemaining)
+                setResult(Activity.RESULT_OK, returnIntent)
+            } else {
+                val errorMessage = "You must select at least one seat to continue."
+                Snackbar.make(findViewById(android.R.id.content), errorMessage, Snackbar.LENGTH_SHORT).show()
+            }
+        }
+
+
 
         minusIcon.setColorFilter(
             ContextCompat.getColor(

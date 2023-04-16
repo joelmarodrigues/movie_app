@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/movie_image_details"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:contentDescription="@string/movie_poster" />
@@ -176,4 +176,15 @@
             android:textSize="14sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/book_now_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/book_now"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
 </LinearLayout>
