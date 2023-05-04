@@ -82,9 +82,9 @@ Icons: https://icons8.com/
 </table>
 
 ## APK Releases
-Download the latest version [here](https://github.com/joelmarodrigues/movie_app/releases/tag/toast).
+Download the latest version [here](https://github.com/joelmarodrigues/movie_app/releases/tag/iconapp).
 
-- Tickets Movie v1.1.0  
+- Tickets Movie v1.1.1  
 
 - Testing features  
 To watch a short video demonstrating the features of the app, click [here](https://youtube.com/shorts/6wkHrcQW0Gk?feature=share).
