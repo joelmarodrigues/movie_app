@@ -1,4 +1,4 @@
-# movie_app
+# Tickets Movie App
 
 Mobile Apps 1 CA2  
 Student Name: Joelma Rodrigues  
@@ -35,23 +35,25 @@ This is an Android app that allows users to browse and book movie tickets for th
 ## Features
 
 - View a list of available movies
-- View movie details including title, synopsis, and release date  
+- View movie details including title, synopsis, cast, and running time 
 - Book movie tickets by selecting a movie and seats  
 - Toast messages for seat selection validation and successful booking  
-- Roboto Condensed font used for headings and buttons
-- Clickable movie posters and Book Now buttons
+- Roboto Condensed font used
+- Clickable movie posters and Book Now buttons  
+
 
 ## References and Credits
-Zoom Meetings: Ramachandran, S. (2023). 
-Mobile App 1 - BSC20922 - Semester 2 [Zoom Meetings]. 
-Dorset College Dublin.
+Zoom Meetings: Ramachandran, S. (2023)  
+Mobile App 1 - BSC20922 - Semester 2 [Zoom Meetings]  
+Dorset College Dublin  
 
-Github Repository: Ramachandran, S. (2023). Dorset MobileApps1. 
+Github Repository: 
+Ramachandran, S. (2023). Dorset MobileApps1  
 Retrieved from https://github.com/saravanabalagi/dorset_mobileApps1
 
-Image Source: https://www.rogerebert.com/reviews/
-Content Source: https://www.myvue.com/
-Icons: https://icons8.com/
+Image Source: https://www.rogerebert.com/reviews/  
+Content Source: https://www.myvue.com/  
+Icons: https://icons8.com/  
 
 - How to use Roboto in XML layout: https://stackoverflow.com/questions/34444616/how-to-use-roboto-in-xml-layout
 - View.OnClickListener: https://developer.android.com/reference/android/view/View.OnClickListener
@@ -62,9 +64,29 @@ Icons: https://icons8.com/
   - https://www.youtube.com/watch?v=HtwDXRWjMcU
   - https://www.youtube.com/watch?v=J_onMnmgF5o&t=5882s  
   
-  
+## Screenshots
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="padding-right: 100px;">
+      <img src="app/src/main/res/drawable/home.png" alt="Home Screen" width="250">
+    </td>
+    <td>
+      <img src="app/src/main/res/drawable/movie_details.png" alt="Movie Details Screen" width="250">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Home Screen</b></td>
+    <td align="center"><b>Movie Details Screen</b></td>
+  </tr>
+</table>
+
 ## APK Releases
 Download the latest version [here](https://github.com/joelmarodrigues/movie_app/releases/tag/toast).
 
-- Tickets Movie v1.1.0
+- Tickets Movie v1.1.0  
+
+- Testing features  
+To watch a short video demonstrating the features of the app, click [here](https://youtube.com/shorts/6wkHrcQW0Gk?feature=share).
+
 
